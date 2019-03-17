@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenu!{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="view-last-videos">
+    <h2 class="block-title">Vídeos más recientes</h2>
+    <div class="row">
+      {% for video in videos.data %}
+      <div class="col s12 m6 l6 xl4">
+        <a href="{{ video.attributes.path.alias }}" class="video-link">
+          <div class="preview">
+          {% for thumbnail in videos.included if thumbnail.id == video.relationships.thumbnail.data.id %}
+          {% for preview in videos.included if preview.id == video.relationships.preview.data.id %}
+            <img src="{{ render_media(thumbnail.attributes.uri.url) }}" alt="{{ video.relationships.thumbnail.data.meta.alt }}" width="640" height="360" class="image-responsive">
+            <video loop muted playsinline src="{{ render_media(preview.attributes.uri.url) }}"></video>
+          {% endfor %}
+          {% endfor %}
+          <span class="video-duration">{{ render_duration(video.attributes.duration) }}</span>
+          </div>
+          <span class="video-title">{{ video.attributes.title }}</span>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="pagination">
+      <ul>
+        {% if videos.links.prev is defined %}
+        <li>
+          <a href="?page={{ prev_page }}" class="waves-effect"><i class="fa fa-angle-left" aria-hidden="true"></i> Anterior</a>
+        </li>
+        {% endif %}
+        {% if videos.links.next is defined %}
+        <li>
+          <a href="?page={{ next_page }}" class="waves-effect">Siguiente <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

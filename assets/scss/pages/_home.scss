@@ -1,0 +1,30 @@
+.view-last-videos {
+  margin-top: 10px;
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .col {
+    margin-top: 10px;
+  }
+  .video-link {
+    display: block;
+    line-height: 15px;
+  }
+  .video-title {
+    @include ellipsis(18px, 1);
+    margin-top: 3px;
+    height: 18px;
+  }
+  .video-duration {
+    position: absolute;
+    background: rgba(#000, 0.5);
+    color: #fff;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    line-height: normal;
+    padding: 2px 4px;
+  }
+}

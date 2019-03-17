@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="language-es" lang="es">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Test website of multimedia." />
+  <title>{% block title %}Default Title{% endblock %}</title>
+  <link href="/css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="/css/icons.css" rel="stylesheet" type="text/css" media="screen" />
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <script type="text/javascript" src="/js/global.min.js"></script>
+</head>
+
+<body>
+  <div class="hide-on-med-and-up">
+    <button class="hamburger hamburger--spin sidenav-custom-trigger" data-target="slide-out" type="button">
+      <span class="hamburger-box"> <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+  <header>
+
+    {% include 'components/navbar.twig' %}
+
+    {% include 'components/sidenav.twig' %}
+
+  </header>
+  {% block content %}
+  <h1>Hola Mundo!</h1>
+  {% for i in 0..50 %}
+  <p>
+    Esto es una prueba super larga.<br>Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test
+  </p>
+  {% endfor %}
+  {% endblock %}
+</body>
+
+</html>

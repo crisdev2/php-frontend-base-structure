@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Westmeath";
+  src:
+    url("../fonts/Westmeath.ttf"),
+    url("../fonts/Westmeath.otf") format("opentype");
+}
+
+.container {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.image-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.block-title {
+  font-family: "Westmeath";
+  font-size: 20px;
+  margin: 0;
+  color: $primary-color;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
