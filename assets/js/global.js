@@ -15,26 +15,6 @@ $(document).ready(function() {
       $('.sidenav').sidenav('open');
     }
   });
-  // SWIPE PREVIEW
-  $('.preview').each(function(){
-    var preview = $(this);
-    preview.on('mouseover touchstart', function(){
-      showPreview($(this));
-    });
-  });
-
-  function showPreview(obj){
-    $('.preview video').each(function(){
-      if($(this).is(':visible')){
-        $(this).hide();
-        $(this)[0].pause();
-      }
-    });
-    var videoObj = obj.children('video');
-    videoObj[0].pause();
-    videoObj.show();
-    videoObj[0].play();
-  }
 
   // SEARCH
   $('form.search').submit(function() {

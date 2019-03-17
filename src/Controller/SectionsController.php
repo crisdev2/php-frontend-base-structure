@@ -8,6 +8,9 @@ use App\Entity\Video;
 class SectionsController extends AbstractController {
 
   public function index(Video $video, Request $request) {
+
+    return $this->render('sections/home.twig');
+
     $cur_page = (Int) $request->query->get('page');
     $per_page = 4;
     $response = $video->lastVideos($cur_page, $per_page);
