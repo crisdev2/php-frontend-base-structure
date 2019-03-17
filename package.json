@@ -19,7 +19,8 @@
     "spritesmith-cli": "^1.1.2",
     "uglify-js": "^3.4.9",
     "uglifycss": "0.0.29",
-    "uglifyjs-folder": "^1.5.1"
+    "uglifyjs-folder": "^1.5.1",
+    "static-eval": ">=2.0.0"
   },
   "directories": {
     "test": "tests"
