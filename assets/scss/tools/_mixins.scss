@@ -16,7 +16,7 @@
 	-moz-border-radius: $radius;
 }
 
-@mixin border-radii($topleft, $topright, $bottomright, $bottomleft) {
+@mixin border-radius-custom($topleft, $topright, $bottomright, $bottomleft) {
 	border-top-left-radius: $topleft;
 	border-top-right-radius: $topright;
 	border-bottom-right-radius: $bottomright;

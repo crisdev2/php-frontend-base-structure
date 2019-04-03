@@ -1,0 +1,7 @@
+<div class="moMenu">
+  <ul>
+    {% for item in menu %}
+    {% include 'atoms/_atMenuItem.twig' with {'item': item} %}
+    {% endfor %}
+  </ul>
+</div>
