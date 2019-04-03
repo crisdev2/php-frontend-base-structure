@@ -1,0 +1,6 @@
+<img
+  src="{{ attr.src }}"
+  {% if img.alt|default %}alt="{{ attr.alt }}"{% endif %}
+  {% if img.width|default %}width="{{ attr.width }}"{% endif %}
+  {% if img.height|default %}height="{{ attr.height }}"{% endif %}
+  >

@@ -14,7 +14,9 @@ class SectionsController extends AbstractController
     ->findByMenuTypeName('navbar');
     
     return $this->render('base.twig', [
-      'menu' => $menu
+      'header' => [
+        'menu' => $menu
+      ]
     ]);
   }
 }
