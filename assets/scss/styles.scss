@@ -5,11 +5,10 @@
 @import 'base/base';
 
 // ORGANISM
-@import 'organism/orHeader';
+@import 'organism/*.scss';
 
 // MOLECULES
-@import 'molecules/moMenu';
-@import 'molecules/moLogo';
+@import 'molecules/*.scss';
 
 // ATOMS
-@import 'atoms/atTitle';
+@import 'atoms/*.scss';

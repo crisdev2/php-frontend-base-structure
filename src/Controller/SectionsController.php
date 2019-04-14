@@ -13,7 +13,7 @@ class SectionsController extends AbstractController
     ->getRepository(Menu::class)
     ->findByMenuTypeName('navbar');
     
-    return $this->render('base.twig', [
+    return $this->render('pages/_home.twig', [
       'header' => [
         'menu' => $menu
       ],

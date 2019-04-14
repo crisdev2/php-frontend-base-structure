@@ -6,12 +6,32 @@
     height: 56px;
     ul {
       li {
+        margin-left: 15px;
         a {
           font-size: 17px;
+          font-weight: 100;
           line-height: normal;
-          padding: 18px 10px;
-          text-transform: uppercase;
-          color: $primary-color;
+          padding: 18px 5px;
+          color: #525252;
+          position: relative;
+          &:hover {
+            color: $primary-color;
+            background: transparent;
+            &::after {
+              width: 90%;
+              height: 3px;
+              background: $primary-color;
+              position: absolute;
+              bottom: 10px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+          &::after {
+            content: " ";
+            width: 10%;
+            @include transition(width, 100ms);
+          }
         }
       }
     }

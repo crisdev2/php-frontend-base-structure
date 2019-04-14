@@ -1,0 +1,32 @@
+.orOpening {
+  background: url('/img/opening-photo.jpg') no-repeat center;
+  color: #fff;
+  height: 400px;
+  text-align: center;
+  background-size: cover;
+  position: relative;
+  h1 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+  .opening-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#000, 0.4);
+    z-index: 1;
+  }
+  .opening-text {
+    @extend .container;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+}

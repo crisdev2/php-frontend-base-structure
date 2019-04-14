@@ -1,0 +1,33 @@
+.moSocialNetworks {
+
+  h3 {
+    font-size: 15px;
+    text-align: right;
+    @media #{$small-and-down} {
+      text-align: center;
+    }
+  }
+  ul {
+    text-align: left;
+    @media #{$small-and-down} {
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      margin: 0 2px;
+      a {
+        display: block;
+        color: #fff;
+        font-size: 35px;
+        line-height: 35px;
+        padding: 5px;
+        background: rgba(#fff, 0.4);
+        @include border-radius(5px);
+        &:hover {
+          background: rgba(#fff, 0.9);
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
