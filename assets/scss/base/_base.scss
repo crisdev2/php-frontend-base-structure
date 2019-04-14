@@ -1,6 +1,15 @@
+body {
+  background: #cecece;
+}
+
 .container {
   width: 100%;
   padding: 0 10px;
+}
+
+.base-wrapper {
+  max-width: 1080px;
+  margin: auto;
 }
 
 .image-responsive {

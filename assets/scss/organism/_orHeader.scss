@@ -1,0 +1,5 @@
+.orHeader {
+  background: #fff;
+  height: 56px;
+  @include box-shadow(1px, 1px, 5px, rgba(#000, 0.2));
+}

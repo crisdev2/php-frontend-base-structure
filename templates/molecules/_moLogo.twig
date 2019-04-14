@@ -1,4 +1,12 @@
-{% set logo = {'src': ''} %}
+{%
+set logo = {
+  'src': config.img_dir ~ "/logo.png",
+  'title': site.slogan,
+  'alt': 'Logo ' ~ site.name,
+  'width': '287px',
+  'height': '56px'
+}
+%}
 <div class="moLogo">
   {% include 'atoms/_atImg.twig' with {'attr': logo} %}
 </div>

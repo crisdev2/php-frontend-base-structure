@@ -1,7 +1,9 @@
 <div class="moMenu">
-  <ul>
-    {% for item in header.menu %}
-    {% include 'atoms/_atMenuItem.twig' with {'item': item} %}
-    {% endfor %}
-  </ul>
+  <nav>
+    <ul>
+      {% for item in header.menu %}
+      {% include 'atoms/_atMenuItem.twig' with {'item': item} %}
+      {% endfor %}
+    </ul>
+  </nav>
 </div>

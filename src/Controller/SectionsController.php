@@ -16,6 +16,16 @@ class SectionsController extends AbstractController
     return $this->render('base.twig', [
       'header' => [
         'menu' => $menu
+      ],
+      'config' => [
+        'img_dir' => '/img',
+        'js_dir' => '/js',
+        'fonts' => '/fonts',
+        'css_dir' => '/css'
+      ],
+      'site' => [
+        'name' => 'Lorem',
+        'slogan' => 'The best php-frontend structure!'
       ]
     ]);
   }

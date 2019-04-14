@@ -4,4 +4,12 @@
 @import 'base/libraries';
 @import 'base/base';
 
+// ORGANISM
+@import 'organism/orHeader';
+
+// MOLECULES
+@import 'molecules/moMenu';
+@import 'molecules/moLogo';
+
+// ATOMS
 @import 'atoms/atTitle';

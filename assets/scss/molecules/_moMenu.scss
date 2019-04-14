@@ -1,0 +1,19 @@
+.moMenu {
+  float: right;
+  nav {
+    background: transparent;
+    box-shadow: none;
+    height: 56px;
+    ul {
+      li {
+        a {
+          font-size: 17px;
+          line-height: normal;
+          padding: 18px 10px;
+          text-transform: uppercase;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
