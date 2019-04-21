@@ -15,7 +15,7 @@ class SectionsController extends AbstractController
     
     return $this->render('pages/_home.twig', [
       'header' => [
-        'menu' => $menu
+        'menu' => []//$menu
       ],
       'config' => [
         'img_dir' => '/img',
@@ -24,8 +24,9 @@ class SectionsController extends AbstractController
         'css_dir' => '/css'
       ],
       'site' => [
-        'name' => 'Lorem',
-        'slogan' => 'The best php-frontend structure!'
+        'name' => 'CrisDev',
+        'slogan' => 'Desarrollo de software',
+        'description' => 'Sitios web, aplicaciones móviles y sistemas de información profesionales.'
       ]
     ]);
   }

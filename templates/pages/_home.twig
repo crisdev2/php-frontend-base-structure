@@ -1,4 +1,27 @@
 {% extends 'base.twig' %}
+{%
+set widgets = {
+  'website': {
+    'title': 'Sitios web',
+    'image': 'website.jpg',
+    'description': 'Transformamos una idea en un portal web responsivo para que tus clientes conozca y accedan a los servicios de tu negocio.'
+  },
+  'system': {
+    'title': 'Sistemas de información',
+    'image': 'system.jpg',
+    'description': 'Creamos sistemas seguros, potentes y confiables para el tratamiento de la información de tu negocio.'
+  },
+  'cellphone': {
+    'title': 'Aplicaciones móviles',
+    'image': 'cellphone.jpg',
+    'description': 'Damos el empuje final que necesita tu negocio para que tus clientes interactúen contigo desde sus celulares.'
+  }
+}
+%}
 {% block content %}
   {% include 'organism/_orOpening.twig' %}
+  {% include 'organism/_orContactForm.twig' %}
+  {% for widgetid, widget in widgets %}
+    {% include 'organism/_orWidget.twig' with {'widget': widget, 'widgetid': widgetid} %}
+  {% endfor %}
 {% endblock %}

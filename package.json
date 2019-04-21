@@ -18,6 +18,7 @@
     "node-sass-glob-importer": "^5.3.1",
     "nodemon": "^1.18.9",
     "pixelsmith": "^2.2.1",
+    "scrollmagic": "^2.0.6",
     "spritesmith": "^3.3.1",
     "spritesmith-cli": "^1.1.2",
     "static-eval": ">=2.0.0",
@@ -31,7 +32,8 @@
   "scripts": {
     "get-jquery": "node_modules/copy/bin/cli.js \"node_modules/jquery/dist/*.min.js\" public/js",
     "get-materialize": "node_modules/copy/bin/cli.js \"node_modules/materialize-css/dist/js/./*.min.js\" public/js",
-    "get-libraries": "npm run get-jquery & npm run get-materialize",
+    "get-scrollmagic": "node_modules/copy/bin/cli.js \"node_modules/scrollmagic/scrollmagic/minified/*.min.js\" public/js",
+    "get-libraries": "npm run get-jquery & npm run get-materialize && npm run get-scrollmagic",
     "get-fonts": "node_modules/copy/bin/cli.js \"assets/fonts/*\" public/fonts; node_modules/copy/bin/cli.js \"node_modules/font-awesome/fonts/*\" public/fonts",
     "build-css": "node_modules/node-sass/bin/node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js --output-style compressed --include-path assets/scss assets/scss/styles.scss public/css/styles.css",
     "watch-css": "node_modules/nodemon/bin/nodemon.js -e scss --watch assets/scss -x \"npm run build-css\"",

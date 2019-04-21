@@ -1,30 +1,30 @@
 $(document).ready(function() {
   // SIDENAV
   instanceSidenav = $('.sidenav').sidenav({
-    onCloseStart : function() {
+    onCloseStart: function() {
       $('.hamburger').removeClass('is-active');
     },
-    onOpenStart : function() {
+    onOpenStart: function() {
       $('.hamburger').addClass('is-active');
     }
   });
-  $('.sidenav-custom-trigger').click(function(){
-    if(instanceSidenav[0].M_Sidenav.isOpen){
+  $('.sidenav-custom-trigger').click(function() {
+    if (instanceSidenav[0].M_Sidenav.isOpen) {
       $('.sidenav').sidenav('close');
-    }else{
+    } else {
       $('.sidenav').sidenav('open');
     }
   });
 
   // SEARCH
   $('form.search').submit(function() {
-    if($(this).find('input[type=search]').val() == ''){
+    if ($(this).find('input[type=search]').val() == '') {
       $(this).find('input[type=search]').focus();
       return false;
     }
   });
 
-  function myAlert(){
+  function myAlert() {
     $('nav').toggle('highlight');
   }
 
